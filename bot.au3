@@ -321,7 +321,7 @@ ElseIf $input1= "3" Then
    Call("ECE113")
 ElseIf $input1 = "4" Then
    Call ("MTH100")
-ElseIf $input1 = "2"
+ElseIf $input1 = "2" Then
    Call ("CSE101")
 Else
    Call ("CSE131")
