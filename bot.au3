@@ -2,7 +2,7 @@
 #prag ma compile(inputboxres, true)
 
  Global $user = InputBox("Hello","Please Enter Your EmailID")
- Global $pswrd = InputBox("Hello Again","Please Enter Your Password")
+ Global $pswrd = InputBox("Hello Again","Please Enter Your Password","","*")
 
 
  Func signInbackpack()
@@ -311,11 +311,21 @@ Func MTH100()
 
 EndFunc
 
+$input1=InputBox("Subject","Please Choose Option:"  & @LF & "1. CSE131"  & @LF & "2. CSE101"  & @LF & "3. ECE113"  & @LF & "4. MTH100"  & @LF & "5. All")
 Call ("signInbackpack")
 Sleep(2000)
-Call ("CSE131")
-Call ("CSE101")
-Call ("ECE113")
-Call ("MTH100")
 
-
+If $input1 = "1" Then
+   Call("CSE131")
+ElseIf $input1= "3" Then
+   Call("ECE113")
+ElseIf $input1 = "4" Then
+   Call ("MTH100")
+ElseIf $input1 = "2"
+   Call ("CSE101")
+Else
+   Call ("CSE131")
+   Call ("CSE101")
+   Call ("ECE113")
+   Call ("MTH100")
+EndIf
